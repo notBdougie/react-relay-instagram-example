@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router'
 import Relay from 'react-relay'
 import Post from '../components/Post'
 
@@ -10,10 +11,15 @@ class ListPage extends React.Component {
 
   render () {
     return (
-      <div>
-        {this.props.viewer.allPosts.edges.reverse().map(({node}) =>
-          <Post key={node.id} post={node} />
-        )}
+      <div className='w-100 flex justify-center'>
+        <Link to='/create' className='fixed bg-white top-0 right-0 pa4 ttu dim black no-underline'>
+          + New Post
+        </Link>
+        <div className='w-100' style={{ maxWidth: 400 }}>
+          {this.props.viewer.allPosts.edges.reverse().map(({node}) =>
+            <Post key={node.id} post={node} viewer={this.props.viewer} />
+          )}
+        </div>
       </div>
     )
   }
@@ -31,6 +37,7 @@ export default Relay.createContainer(ListPage, {
             }
           }
         }
+        ${Post.getFragment('viewer')}
       }
     `,
   },

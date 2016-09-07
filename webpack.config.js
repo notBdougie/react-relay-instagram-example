@@ -20,9 +20,6 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
         test: /\.js$/,
         loader: 'babel',
         exclude: /node_modules/
-      }, {
-        test: /\.svg$/,
-        loader: 'file'
       }]
     },
     plugins: [

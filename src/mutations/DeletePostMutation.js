@@ -1,14 +1,14 @@
 import Relay from 'react-relay'
 
-export default class DeletePokemonMutation extends Relay.Mutation {
+export default class DeletePostMutation extends Relay.Mutation {
 
   getMutation () {
-    return Relay.QL`mutation{deletePokemon}`
+    return Relay.QL`mutation{deletePost}`
   }
 
   getFatQuery () {
     return Relay.QL`
-    fragment on DeletePokemonPayload {
+    fragment on DeletePostPayload {
       viewer
       deletedId
     }
@@ -20,20 +20,20 @@ export default class DeletePokemonMutation extends Relay.Mutation {
       type: 'NODE_DELETE',
       parentName: 'viewer',
       parentID: this.props.viewerId,
-      connectionName: 'pokemon',
+      connectionName: 'post',
       deletedIDFieldName: 'deletedId',
     }]
   }
 
   getVariables () {
     return {
-      id: this.props.pokemonId,
+      id: this.props.postId,
     }
   }
 
   getOptimisticResponse () {
     return {
-      deletedId: this.props.pokemonId,
+      deletedId: this.props.postId,
     }
   }
 }
