@@ -8,12 +8,14 @@ After [downloading this example](https://github.com/graphcool-examples/react-rel
 
 ### 1. Create an account
 
-To run this example, please create a [graph.cool](http://graph.cool) account and **copy your `PROJECT_ID`**. This shouldn't take longer than a minute. We promise!
+To run this example, please create a [graph.cool](http://graph.cool) account and **copy your endpoint**. This shouldn't take longer than a minute. We promise!
+
+![](http://i.imgur.com/ytXDR4B.gif)
 
 
 ### 2. Configure app data endpoint
 
-Open `src/app.js` and paste your `PROJECT_ID` to the following line:
+Open `src/app.js` and paste your endpoint to the following line:
 
 ```js
 Relay.injectNetworkLayer(
@@ -23,7 +25,7 @@ Relay.injectNetworkLayer(
 
 ### 3. Configure build schema endpoint
 
-Open `package.json` and insert your `PROJECT_ID` in the following line:
+Open `package.json` and insert your endpoint in the following line:
 
 
 ```json
