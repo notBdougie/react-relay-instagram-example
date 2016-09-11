@@ -8,7 +8,11 @@ import useRelay from 'react-router-relay'
 import './index.css'
 
 Relay.injectNetworkLayer(
-  new Relay.DefaultNetworkLayer('https://api.graph.cool/relay/v1/cis7q7f5r27ig01420766c54k')
+  new Relay.DefaultNetworkLayer('https://api.graph.cool/relay/v1/__PROJECT_ID__', {
+    headers: {
+      'x-graphcool-source': 'example:react-relay-instagram',
+    },
+  })
 )
 
 const ViewerQueries = { viewer: () => Relay.QL`query { viewer }` }
