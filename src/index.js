@@ -7,7 +7,7 @@ import { Router, Route, browserHistory, applyRouterMiddleware } from 'react-rout
 import useRelay from 'react-router-relay'
 import './index.css'
 
-// The x-graphcool-source header is to let the server know that the example app has started. 
+// The x-graphcool-source header is to let the server know that the example app has started.
 // (Not necessary for normal projects)
 
 Relay.injectNetworkLayer(
