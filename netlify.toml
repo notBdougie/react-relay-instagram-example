@@ -3,4 +3,4 @@
   publish = "build"
 
 [template.environment]
-  GRAPHQL_URL = "change me for your graph.cool relay url"
+  GRAPHQL_ENDPOINT = "change me for your graph.cool relay url"
