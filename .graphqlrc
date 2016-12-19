@@ -1,5 +1,0 @@
-{
-  "request": {
-    "url": "$GRAPHQL_ENDPOINT"
-  }
-}
