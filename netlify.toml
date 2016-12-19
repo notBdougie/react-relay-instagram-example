@@ -1,0 +1,6 @@
+[build]
+  command = "npm run build"
+  publish = "build"
+
+[template.environment]
+  GRAPHQL_URL = "change me for your graph.cool relay url"
